@@ -14,7 +14,11 @@ document.querySelector("#myButton").addEventListener('click',function (){
     document.querySelector("#estimation").innerHTML = "Estimation de votre prime : "+recupPrimeAnnuelle(recupPrimeAncien(anciennete),recupPrimeDist(distance),accident);
 });
 
-
+/**
+ *
+ * @param distance
+ * @returns {number}
+ */
 function recupPrimeDist(distance) {
     const gainKilometre = 0.01;
     const plafond = 900;
@@ -42,24 +46,24 @@ function recupPrimeAncien(anciennete) {
 
 /**
  * 
- * @param {type} prime
- * @param {type} prime2
- * @param {type} nombreAccident
+ * @param {Number} prime
+ * @param {Number} prime2
+ * @param {Number} nombreAccident
  * @returns {Number}
  */
 function recupPrimeAnnuelle(prime, prime2, nombreAccident) {
     switch (nombreAccident) {
         case 0:
-            return Math.round((prime + prime2) / 3*100)/100;
+            return prime + prime2;
             break;
         case 1:
-            return Math.round((prime + prime2) / 3*100)/100;
+            return Math.round((prime + prime2) / 2*100)/100;
             break;
         case 2:
             return Math.round((prime + prime2) / 3*100)/100;
             break;
         case 3:
-            return Math.round((prime + prime2) / 3*100)/100;
+            return Math.round((prime + prime2) / 4*100)/100;
             break;
         case 4:
             return 0;
