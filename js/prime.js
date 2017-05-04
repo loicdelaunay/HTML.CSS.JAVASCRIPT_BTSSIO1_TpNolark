@@ -1,16 +1,12 @@
-//SCRIPT DE CALCUL DE PRIME
+//SCRIPT DE CALCUL DE PRIME//
 
 
 
 
-//document.querySelector("#myrange").addEventListener('onchange', function () {
-//    document.querySelector("#myoutput").value = document.querySelector("#myrange").value;
-//});
+document.querySelector("#myrange").addEventListener('change', function () {
+   document.querySelector("#myoutput").value = document.querySelector("#myrange").value;
+});
 
-var slide = document.querySelector('#myrange')
-slide.onclick = function () {
-    document.querySelector("#myoutput").value = document.querySelector("#myrange").value;
-}
 
 document.querySelector("#myButton").addEventListener('click',function (){
     var distance = parseInt(document.querySelector("#distance").value);
