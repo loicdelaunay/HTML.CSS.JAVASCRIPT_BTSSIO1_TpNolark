@@ -1,0 +1,53 @@
+/* 
+    Document   : team
+    Created on : 8 oct. 2013, 08:47:19
+    Author     : JG
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h1 {
+    margin: 0 auto 0 auto;
+    color: black;
+    clear: both;
+}
+
+#reco, #teammap, #twitter, #twitter-widget-0 {
+    width: 950px !important;
+    margin: 0 auto 0 auto;
+}
+
+/* Pour que NetBeans ne lève pas de warning */
+.twitter-timeline {}
+
+#teammap {
+    display:block;
+    height:633px;
+    background:url(images/nolark_team.jpg) no-repeat;
+    position:relative;
+    margin:2px auto 2px auto;
+}
+
+#teammap li {
+    list-style-type:none;
+}
+
+#teammap li a {
+    background:transparent;
+    display:block;
+    height:0;
+    overflow:hidden;
+    position:absolute;
+    width: 165px;
+    padding-top: 245px;
+}
+
+#membre1 {left: 60px; top: 85px;}
+#membre2 {left: 220px; top: 80px;}
+#membre3 {left: 405px; top: 10px;}
+#membre4 {left: 585px; top: 50px;}
+#membre5 {left: 720px; top: 111px;}
+
+#teammap li a:hover {border: 1px dashed black;}
+#teammap li a:hover.homme {background-color : rgba(0, 0, 255, 0.1);}
+#teammap li a:hover.femme  {background-color : rgba(255, 0, 0, 0.1);}

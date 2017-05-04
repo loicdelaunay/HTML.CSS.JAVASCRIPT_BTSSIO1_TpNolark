@@ -1,0 +1,18 @@
+/* 
+    Document   : enfants
+    Created on : 30 sept. 2015, 08:15:07
+    Author     : JG
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#video article {
+    float: left;
+    width: 450px;
+    height: 270px;
+}
+
+#video article img {
+    float: left;
+}
+
