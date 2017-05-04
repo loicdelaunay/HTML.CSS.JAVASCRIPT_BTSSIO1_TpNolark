@@ -1,3 +1,9 @@
 #simulateur2{
+    clear: both;
     margin: 2% auto 0 auto;
+    text-align: center;
+}
+
+.space{
+    margin-top: 20px;
 }

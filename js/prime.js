@@ -1,17 +1,22 @@
+//SCRIPT DE CALCUL DE PRIME
 
 
 
 
+//document.querySelector("#myrange").addEventListener('onchange', function () {
+//    document.querySelector("#myoutput").value = document.querySelector("#myrange").value;
+//});
 
-document.querySelector("#myrange").addEventListener('change', function () {
+var slide = document.querySelector('#myrange')
+slide.onclick = function () {
     document.querySelector("#myoutput").value = document.querySelector("#myrange").value;
-});
+}
 
 document.querySelector("#myButton").addEventListener('click',function (){
     var distance = parseInt(document.querySelector("#distance").value);
     var anciennete = parseInt(document.querySelector("#anciennete").value);
     var accident = parseInt(document.querySelector("#myrange").value);
-    document.querySelector("#estimation").innerHTML = "Estimation de votre prime : "+recupPrimeAnnuelle(recupPrimeAncien(anciennete),recupPrimeDist(distance),accident);
+    calculFinal(distance,anciennete,accident);
 });
 
 /**
@@ -72,4 +77,14 @@ function recupPrimeAnnuelle(prime, prime2, nombreAccident) {
             return 0;
             break;
     }
+}
+
+function calculFinal(distance,anciennete,accident) {
+    if (accident === 0){
+        document.querySelector("#estimation").innerHTML = "Bravo pour ne pas avoir eu d'accidents ! Votre prime est de : "+recupPrimeAnnuelle(recupPrimeAncien(anciennete),recupPrimeDist(distance),accident)+"€";
+    }
+    else{
+        document.querySelector("#estimation").innerHTML = "Dommage d'avoir eu : "+accident+" accident(s) ! L'éstimation de votre prime est de : "+recupPrimeAnnuelle(recupPrimeAncien(anciennete),recupPrimeDist(distance),accident)+"€ Sans accident(s) vous auriez eu une prime de :"+recupPrimeAnnuelle(recupPrimeAncien(anciennete),recupPrimeDist(distance),0)+"€";
+    }
+    
 }
